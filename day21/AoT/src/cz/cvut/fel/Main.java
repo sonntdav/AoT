@@ -2,10 +2,20 @@ package cz.cvut.fel;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.print("Hello and welcome!");
+        char[][] numeric = {
+                {'7', '8', '9'},
+                {'4', '5', '6'},
+                {'1', '2', '3'},
+                {'X', '0', 'A'},
+        };
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
-        }
+        char[][] directional = {
+                {'X', '^', 'A'},
+                {'<', 'v', '>'}
+        };
+
+        Controller startingController = new Controller(numeric);
+        Controller secondcontroller = new Controller(directional);
+
     }
 }
